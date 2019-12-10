@@ -92,7 +92,6 @@ export class OperationMenuItemContent extends React.Component<OperationMenuItemC
       >
         <MenuItemTitle width="calc(100% - 38px)">
           {item.name}
-          {this.props.children}
         </MenuItemTitle>
       </MenuItemLabel>
     );
