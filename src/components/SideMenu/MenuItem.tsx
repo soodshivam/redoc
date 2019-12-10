@@ -90,7 +90,6 @@ export class OperationMenuItemContent extends React.Component<OperationMenuItemC
         deprecated={item.deprecated}
         ref={this.ref}
       >
-
         <MenuItemTitle width="calc(100% - 38px)">
           {item.name}
           {this.props.children}
