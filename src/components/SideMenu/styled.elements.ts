@@ -6,7 +6,7 @@ import styled, { css } from '../../styled-components';
 
 export const OperationBadge = styled.span.attrs((props: { type: string }) => ({
   className: `operation-type ${props.type}`,
-}))<{ type: string }>`
+})) <{ type: string }>`
   width: 32px;
   display: inline-block;
   height: ${props => props.theme.typography.code.fontSize};
@@ -25,41 +25,6 @@ export const OperationBadge = styled.span.attrs((props: { type: string }) => ({
   margin-right: 6px;
   margin-top: 2px;
 
-  &.get {
-    background-color: ${props => props.theme.colors.http.get};
-  }
-
-  &.post {
-    background-color: ${props => props.theme.colors.http.post};
-  }
-
-  &.put {
-    background-color: ${props => props.theme.colors.http.put};
-  }
-
-  &.options {
-    background-color: ${props => props.theme.colors.http.options};
-  }
-
-  &.patch {
-    background-color: ${props => props.theme.colors.http.patch};
-  }
-
-  &.delete {
-    background-color: ${props => props.theme.colors.http.delete};
-  }
-
-  &.basic {
-    background-color: ${props => props.theme.colors.http.basic};
-  }
-
-  &.link {
-    background-color: ${props => props.theme.colors.http.link};
-  }
-
-  &.head {
-    background-color: ${props => props.theme.colors.http.head};
-  }
 `;
 
 function menuItemActiveBg(depth, { theme }): string {
@@ -124,7 +89,7 @@ export const MenuItemLabel = styled.label.attrs((props: MenuItemLabelType) => ({
   className: classnames('-depth' + props.depth, {
     active: props.active,
   }),
-}))<MenuItemLabelType>`
+})) <MenuItemLabelType>`
   cursor: pointer;
   color: ${props => (props.active ? props.theme.colors.primary.main : props.theme.menu.textColor)};
   margin: 0;
